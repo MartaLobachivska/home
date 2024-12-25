@@ -2,7 +2,14 @@ from datetime import date, datetime
 
 
 def get_birthdays_per_week(users):
-    # Реалізуйте тут домашнє завдання
+    today = date.today()
+    next_week = today + datetime
+    days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] 
+    birthdays = {day: [] for day in days_of_week}
+    for user in users:
+        name = user['name']
+        birthday = user['birthday'] 
+        this_year_birthday = birthday.replace(year=today.year)
     return users
 
 
